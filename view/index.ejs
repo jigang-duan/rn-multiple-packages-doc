@@ -1,0 +1,184 @@
+<% var item, key %><%
+htmlWebpackPlugin.options.appMountIds = htmlWebpackPlugin.options.appMountIds || [] %><%
+htmlWebpackPlugin.options.lang = htmlWebpackPlugin.options.lang || "en" %><%
+htmlWebpackPlugin.options.links = htmlWebpackPlugin.options.links || [] %><%
+htmlWebpackPlugin.options.meta = htmlWebpackPlugin.options.meta || [] %><%
+htmlWebpackPlugin.options.scripts = htmlWebpackPlugin.options.scripts || []
+%><!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <%
+    for (item of htmlWebpackPlugin.options.links) { %><%
+      if (typeof item === 'string' || item instanceof String) { item = { href: item, rel: 'stylesheet' } } %>
+    <link<% for (key in item) { %> <%= key %>="<%= item[key] %>"<% } %> /><%
+    } %>
+      
+  </head>
+  <body class="impress-not-supported">
+
+  <div class="fallback-message">
+    <p>您的浏览器<b>不支持impress所需的功能</b>, 所以你得到了这个演示的一个简化版本。</p>
+    <p>为了获得最好的体验，请使用最新的<b>Chrome</b>, <b>Safarior</b> 或 <b>Firefox</b>浏览器。</p>
+
+  </div>
+
+  <div id="impress">
+
+    <div id="title" class="step" data-x="0" data-y="200" data-scale="4">
+        <span class="try">打造多业务支撑的企业级APP</span>
+        <h2>RN+微应用+门户<sup>*</sup></h2>
+        <span class="footnote"><sup>*</sup> APP大型复杂业务的可能性</span>
+    </div>
+
+    <div id="bored" class="step slide" data-x="-1000" data-y="-1500">
+        <q><strong>定位</strong></q>
+        <q>应对多业务的高效企业移动平台</q>
+    </div>
+
+    <div id="ing" class="step slide" data-x="0" data-y="-1500">
+        <q>企业移动化过程中面临的<b class="rotating">挑战</b> ?</q>
+    </div>
+
+    <div id="挑战" class="step slide" data-x="1000" data-y="-1500">
+      <q>
+        <ul.circle >
+          <li>挑战一：多团队开发难以整合，效率低下</li>
+          <li>挑战二：业务复杂多变，需要灵活应对</li>
+          <li>挑战三：各类需求快速移动化，互不干扰</li>
+        </ul>
+      </q>
+    </div>
+
+    <div id="解决方案" class="step slide" data-x="-1000" data-y="-700" data-rotate-y="10">
+        <q>针对问题的实践化 <b>解决方案</b></q>
+    </div>
+
+    <div id="跨平台" class="step slide" data-x="-300" data-y="-700" data-rotate-y="20">
+        <span><sup>1.</sup> 以跨平台的思路解决开发实施问题</span>
+        <img alt="跨平台" src="./assets/641.jpeg">
+        <span>跨平台可以保证一套代码适配两个系统，对于开发者来说，就不用像之前一样既写ios代码又写安卓代码，并且也不用去过多的关心系统兼容性问题。</span>
+    </div>
+
+    <div id="微应用模式" class="step slide" data-x="400" data-y="-700" data-rotate-y="20">
+        <span><sup>2.</sup> 以微应用的模式加速业务推广</span>
+        <img alt="微应用模式" src="./assets/642.jpeg">
+    </div>
+
+    <div id="应用商店" class="step slide" data-x="1100" data-y="-700" data-rotate-y="20">
+        <span><sup>3.</sup> 建设企业应用监管平台</span>
+        <img alt="应用商店" src="./assets/645.jpeg" width="800px" height="400px">
+        <span>为了企业运维的人员对应用的统一管理。提出了构建企业内部应用商店的方案，解决企业内部应用的托管和分发问题。</span>
+    </div>
+
+    <div id="门户" class="step slide" data-x="1800" data-y="-700" data-rotate-y="20">
+        <span><sup>4.</sup> <strong>门户+微应用+企业应用商店</strong> 加快全面移动化</span>
+        <img alt="门户" src="./assets/647.jpeg" width="800px" height="400px">
+        <span>通过门户提供了应用的统一入口，通过商店可以对多类型应用进行管理，这种模式加快了全面移动化的脚步。。</span>
+    </div>
+
+    <div id="微应用特点" class="step slide" data-x="240" data-y="-700" data-scale="0.6" data-z="-600" data-rotate-y="-10">
+        <span><sup>*</sup> 微应用的三个特点</span>
+        <img alt="微应用特点" src="./assets/643.jpeg" width="800px" height="300px">
+        <ul.circle>
+          <li>开发的独立性，确保了多个团队能够并行开发且不需要相互依赖，其应用的功能又可以与框架App相互独立，确保其自身功能的自由性</li>
+          <li>运行态动态部署，开发人员不需要把所有的模块应用都打包发</li>
+        </ul>
+    </div>
+
+    <div id="微应用优势" class="step slide" data-x="600" data-y="-700" data-scale="0.6" data-z="-700" data-rotate-y="40">
+        <span><sup>*</sup> 微应用的优势</span>
+        <img alt="微应用优势" src="./assets/644.jpeg" width="800px" height="300px">
+    </div>
+
+    <div id="应用商店特点" class="step slide" data-x="1100" data-y="-700" data-scale="0.6" data-z="-400">
+        <span><sup>*</sup> 应用商店的特点</span>
+        <ul.circle>
+          <li>微应用统一管理</li>
+          <li>健全的审核机制，包括应用创建、灰度、发布、升级、下架程审核管理</li>
+          <li>应用是分权限的，有的应用不是所有人都能使用的，应支持按权限进行管理</li>
+          <li>支持多种更新机制</li>
+        </ul>
+    </div>
+
+    <div id="react-native" class="step slide" data-x="-1000" data-y="1200">
+        <q><strong>技术选型</strong> - RN+微应用</q>
+        <span class="footnote">为什么选择<a href="https://facebook.github.io/react-native/">React Native</a>作为整合技术</span>
+    </div>
+
+    <div class="step" data-x="-1000" data-y="1850" data-scale="0.8" data-rotate-x="-10">
+        <q><span>App的整合技术是关键，考虑因素</span></q>
+        <q><ul.circle>
+          <li>用户体验</li>
+          <li>快速开发</li>
+          <li>易于整合</li>
+        </ul></q>
+    </div> 
+
+    <div class="step" data-x="-1000" data-y="2300" data-scale="0.7" data-rotate-x="-20">
+      <span>移动端技术比较</span>
+      <q><img alt="移动端技术" src="./assets/640.jpeg"></q>
+    </div>
+
+    <div id="mobile-comparison" class="step" data-x="-1000" data-y="2650" data-scale="0.6" data-rotate-x="-30">
+        <ol>
+          <li><b class="positioning">网页开发</b>: 用户<b class="scaling">体验差</b>，本地能力缺失，适配问题大</li>
+          <li><b class="positioning">原生开发</b>: 原生体验好，相对<b class="scaling">成本较高</b>。原生热更方案难以落地</li>
+          <li><b class="positioning">混合开发</b>: 
+            <ul>
+              <li>H5作为UI，内置<b class="scaling">Webkit渲染</b>，插件扩展本地能力;</li>
+              <li>因其UI的渲染采用浏览器的方式，难免影响用户体验。</li>
+            </ul>
+          </li>
+          <li><b class="positioning">驱动开发</b>: 
+            <ul>
+              <li>运行态时，调用系统接口，<b class="rotating">原生UI渲染</b>，而不是浏览器内核渲染;</li>
+              <li>用户体验、跨平台、性能、以及热更方案，可以获得更好的支持。</li>
+            </ul>
+          </li>
+        </ol>
+    </div>
+
+    <div class="step" data-x="0" data-y="1200">
+       <span>选择RN的优势</span>
+        <q><ul.circle>
+          <li>优势一：技术先进，用户体验好</li>
+          <li>优势二：RN多bundle模式支撑多团队开发</li>
+          <li>优势三：底层原生，易于整合多应用</li>
+        </ul></q>
+    </div>
+
+    <div class="step" data-x="1000" data-y="1200">
+      <span>微应用模式可参考方案 - <a href="https://www.expo.io">EXPO</a></span>
+      <img alt="expo" src="./assets/expo-c.png"><br />
+      <span>Expo是一个免费的开源工具链，使用JavaScript和
+        <a href="https://reactjs.org">React</a>,
+      </span>
+      <span>围绕<a href="https://facebook.github.io/react-native/">React Native</a>来帮助你构建原生的iOS和Android项目。</span>
+    </div>
+
+  </div>
+
+    <div id="impress-toolbar"></div>
+
+    <div class="hint">
+    <p>使用空格键或箭头键导航. <br/>
+       按“P”键启动演讲者控制台.</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>向左或向右滑动来导航</p>";
+}
+</script>
+
+    <%
+    for (item of htmlWebpackPlugin.options.scripts) { %><%
+      if (typeof item === 'string' || item instanceof String) { item = { src: item, type: 'text/javascript' } } %>
+    <script<% for (key in item) { %> <%= key %>="<%= item[key] %>"<% } %>></script><%
+    } %>
+
+    <%= htmlWebpackPlugin.options.bodyHtmlSnippet %>
+  </body>
+</html>
