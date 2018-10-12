@@ -1,5 +1,7 @@
 # `RN+微应用+门户` 打造多业务支撑的企业级APP
 
+[PPT](https://jigang-duan.github.io/rn-multiple-packages-doc/dist/)
+
 > APP大型复杂业务的可能性
 
 ## 定位 - 应对多业务的高效企业移动平台

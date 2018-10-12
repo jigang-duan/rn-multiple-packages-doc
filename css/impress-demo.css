@@ -805,7 +805,7 @@ body.impress-mouse-timeout {
 */
 
 #react-native {
-  background-image: url(/assets/timg.jpeg);
+  background-image: url(../assets/timg.jpeg);
   background-size: 100% 100%;
   color: #EEE;
 }
